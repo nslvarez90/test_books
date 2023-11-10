@@ -1,3 +1,4 @@
+import { SingleBookComponent } from './single-book/single-book.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookListComponent } from './book-list/book-list.component';
@@ -12,7 +13,10 @@ const routes: Routes = [
     path: 'books',
     component: BookListComponent,
   },
- 
+  {
+    path: 'book/:id',
+    component: SingleBookComponent,
+  } 
 ];
 
 @NgModule({

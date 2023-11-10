@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('../app/book-lis/book-lis.module')
       .then(m => m.BookLisModule)
-  }
+   }   
 ];
 
 @NgModule({
