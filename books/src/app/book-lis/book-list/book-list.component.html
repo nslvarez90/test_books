@@ -74,5 +74,35 @@
         </a>
       </div>     
     </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="text" [(ngModel)]="searchTerm" placeholder="Search products" />
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Title</th>               
+                <th scope="col">Editorial</th>  
+                  <th scope="col">Author(s)</th>             
+                <th scope="col">Ver Mas</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let book of bookList | filterBy: ['title']:this.searchTerm;let i = index">
+                <td>{{book.bookId}}</td>
+                <td>{{book.title }}</td>
+                <td>{{book.editorial }}</td>
+                <td>{{book.authors }}</td>
+                <td> 
+                    <a (click)="viewBook(i)" class="icon-link">
+                    Ver mas
+                   <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+                 </a></td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
   </div>
 </main>

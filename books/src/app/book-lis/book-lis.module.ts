@@ -5,6 +5,8 @@ import { BookLisRoutingModule } from './book-lis-routing.module';
 import { BookListComponent } from './book-list/book-list.component';
 import { SingleBookComponent } from './single-book/single-book.component';
 import { RouterModule } from '@angular/router';
+import { NgArrayPipesModule } from 'ngx-pipes';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     BookLisRoutingModule,
-    RouterModule
+    RouterModule,
+    NgArrayPipesModule,
+    FormsModule
   ]
 })
 export class BookLisModule { }

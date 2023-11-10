@@ -13,6 +13,7 @@ export class BookListComponent implements  OnInit{
   public bookList: Array<Book> = [] 
   public booUrl: string = '../../assets/books_source.json'
   public isReady:boolean=false;
+  searchTerm = "";
   constructor(
     private _books: BookService,
     private route: Router,

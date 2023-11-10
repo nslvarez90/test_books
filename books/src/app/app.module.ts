@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NgArrayPipesModule } from 'ngx-pipes';
 
 
 
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule    
+    RouterModule,
+    NgArrayPipesModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
